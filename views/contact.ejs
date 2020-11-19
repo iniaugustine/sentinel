@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+ <html lang="en">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <!--FONTAWESOME CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5538ff0415.js" crossorigin="anonymous"></script>
+
+    <!--FONTS CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>Sentinel Privacy</title>
+</head>
+<style>
+    .title {
+        font-size: xx-large;
+    }
+
+    body {
+        font-family: 'Alef', sans-serif;
+    }
+
+    .title,
+    #title {
+        font-size: 25px;
+    }
+
+    .name {
+        font-family: 'Piedra', cursive;
+        font-size: large;
+        text-shadow: 3px 4px 3px grey;
+    }
+
+    .sent {
+        color: #e62a2a;
+    }
+</style>
+
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-dark bg-info navbar-expand-md">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-target="#thetarget" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="thetarget" class="justify-content-center collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link mx-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/services" class="nav-link mx-3">Services</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/contact" class="nav-link mx-3 disabled">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/career" class="nav-link mx-3">Applications</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a href="#mod" data-toggle="modal" class="nav-link mx-3">Register</a>
+
+                            <div id="mod" class="modal">
+                                <div class="m-6 " style="background:#5f97ae">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-white">Register</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" onsubmit="return valid()" method="post">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a class="btn bg-light btn-outline border border-right-0"><i class="fa fa-envelope"></i></a>
+                                                    </span>
+                                                    <input class="form-control border border-left-0" id="email" type="email" placeholder="Enter your Email" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="visi()" class="btn-outline btn bg-light border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="pwd" id="n1" class="border border-left-0 form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="vis()" class="btn-outline btn bg-light border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="cpwd" id="n2" class="border border-left-0 form-control" placeholder="Confirm Password">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customcheck" required>
+                                                <label for="customcheck" class="custom-control-label"><a class="text-light" target="_blank" href/="termsC"><small><i>Terms and Conditions</i></small></a></label>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-success">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-3"> <a href="#log" data-toggle="modal" class="nav-link">Login</a>
+                            <div id="log" class="modal">
+                                <div class="m-6 bg-light">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-dark">Login</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="post" onsubmit="return validate()">
+
+                                            <div class="form-group">
+
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a class="btn btn-outline border border-right-0"><i class="fas text-dark fa-envelope"></i></a>
+                                                    </span>
+                                                    <input class="form-control border border-left-0" id="mail" type="email" placeholder="Enter your Email">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="visible()" class="btn-outline btn bg-transparent border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="pwd" id="pwd" class="border border-left-0 form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" id="custom" class="custom-control-input">
+                                                <label for="custom" class="custom-control-label">Remember Me</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-success">Submit</button>
+                                            <button type="submit" onclick="" class="btn btn-block btn-danger" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <div class="dropdown-divider d-md-none"></div>
+
+                        <li class="nav-link mt-n1 mb-n3 mx-3">
+                            <form action="" class="form-group">
+
+                                <div class="input-group">
+                                    <input class="form-control bg-transparent py-2 border border-right-0" type="search" placeholder="Search">
+                                    <span class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-secondary border border-left-0">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+
+        <!--Contact US-->
+        <div class="text-center pt-4 title text-info">
+            CONTACT US
+        </div>
+        <hr>
+
+        <div class="mt-4">
+            <h5>CONTACT FORM</h5>
+
+        </div>
+
+        <!--form-->
+        <div class="container">
+            <form action="#" class="needs-validation" novalidate>
+
+                <div class="form-group">
+                    <label for="name">
+                        First Name<span style="color: red">*</span>
+                    </label>
+                    <input class="form-control" type="text" required name="fname">
+                    <div class="valid-feedback">valid</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lname">
+                        Last Name<span style="color: red">*</span>
+                    </label>
+                    <input class="form-control" type="text" required name="lname">
+                    <div class="valid-feedback">valid</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cname">
+                        Company Name
+                    </label>
+                    <input class="form-control" type="text" required name="lname">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email Address<span style="color: red">*</span>
+                    </label>
+                    <input class="form-control" type="email" required name="email">
+                    <div class="valid-feedback">valid</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="number">
+                        Phone Number
+                    </label>
+                    <input class="form-control" type="text" required name="number">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="number">
+                        Nature of Contact<span style="color: red">*</span>
+                    </label>
+                    <select name="contact" required class="custom-select">
+                        <option selected></option>
+                        <option value="email">I Need Security Services</option>
+                        <option value="phone">I Would Like a Free Consultation</option>
+                        <option value="phone">I Am an Existing Client</option>
+                    </select>
+                    <div class="valid-feedback">valid</div>
+                    <div class="invalid-feedback">Please pick an option.</div>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label for="text">
+                        <b>Message</b>
+                    </label>
+                    <textarea class="form-control" required name="text" rows="7"></textarea>
+                    <div class="valid-feedback">valid</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="number">
+                        Preferred Contact?<span style="color: red">*</span>
+                    </label>
+                    <select name="contact" required class="custom-select">
+                        <option selected></option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
+                    <div class="valid-feedback">valid</div>
+                    <div class="invalid-feedback">Please pick an option.</div>
+                </div>
+                <button type="submit" class="btn btn-info btn-block">Submit</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="mt-4 meee text-light" style="background:#5f97ae">
+        <div class="container">
+
+            <p id="title" class="text-center pt-2 name">The<span class="sent title">Sentinel</span></p>
+        </div>
+        <hr class="clearfix w-100 d-md-none" style="visibility:hidden">
+
+        <div class="col text-right">
+            <small><i>&copy 2020 The Sentinel Corp. All Rights Reserved.</i></small>
+        </div>
+
+
+    </footer>
+
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script>
+        function valid() {
+            var n1 = document.getElementById('n1');
+            var n2 = document.getElementById('n2');
+            var email = document.getElementById("email");
+            if (n1.value == n2.value && n1.value != "") {
+                alert('A verification link has been sent to your Email Address');
+            } else alert('Password Mismatch');
+
+        }
+
+
+        function validate() {
+            var pwd = document.getElementById('pwd');
+            var email = document.getElementById('mail');
+            if (pwd.value != "" && email.value != "") {
+                alert("Welcome back User!");
+            } else alert("Input your password");
+        }
+
+        function visible() {
+            var x = document.getElementById('pwd');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+        function visi() {
+            var x = document.getElementById('n1');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+        function vis() {
+            var x = document.getElementById('n2');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+    </script>
+
+
+    <script>
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("se/lected")(fileName);
+        });
+    </script>
+</body>
+</html>>

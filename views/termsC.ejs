@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <!--FONTAWESOME CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5538ff0415.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/bootstrap-4.5.2-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+
+ 
+ <!--FONTS CDN-->
+<link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+         <title>Sentinel Terms and Conidtions</title>
+     </head>
+      <style>
+        .title{
+            font-size: xx-large;
+        }
+      body{
+ 				font-family: 'Alef', sans-serif;
+ 				}
+.title, #title {
+				font-size: 25px;
+				}
+.name{
+				font-family: 'Piedra', cursive;
+				font-size:large; text-shadow: 3px 4px 3px grey;
+				}
+.sent{
+				color:#e62a2a;
+				}				
+    </style>
+    
+ <body>
+      <header>
+
+<nav class="navbar navbar-dark bg-info navbar-expand-md">
+<div class="container-fluid">
+<button class="navbar-toggler" data-target="#thetarget" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="thetarget" class="justify-content-center collapse navbar-collapse">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a href="/" class="nav-link mx-3">Home</a>
+</li>
+<li class="nav-item">
+<a href="/services" target="_blank" class="nav-link mx-3">Services</a>
+</li>
+<li class="nav-item">
+<a href="/contact" target="_blank" class="nav-link mx-3">Contact</a>
+</li>
+<li class="nav-item">
+<a href="/career" target="_blank" class="nav-link mx-3">Applications</a>
+</li>
+<li class="nav-item">
+
+<a href="#mod" data-toggle="modal" class="nav-link mx-3">Register</a>
+
+<div id="mod" class="modal">
+<div class="m-6 " style="background:#5f97ae">
+<div class="modal-header">
+<h4 class="modal-title text-white">Register</h4>
+<button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+</div>
+
+<div class="modal-body">
+<form action="" onsubmit="return valid()" method="post">
+<div class="form-group">
+<div class="input-group">
+<span class="input-group-prepend">
+<a class="btn bg-light btn-outline border border-right-0"><i class="fa fa-envelope"></i></a>
+</span>
+<input class="form-control border border-left-0" id="email" type="email" placeholder="Enter your Email" required>
+</div>
+</div>
+<div class="form-group">
+<div class="input-group">
+<span class="input-group-prepend">
+<a onclick="visi()" class="btn-outline btn bg-light border border-right-0">
+<i class="far fa-eye"></i>
+</a>
+</span>
+<input type="password" name="pwd" id="n1" class="border border-left-0 form-control" placeholder="Password">
+</div>
+</div>
+<div class="form-group">
+<div class="input-group">
+<span class="input-group-prepend">
+<a onclick="vis()" class="btn-outline btn bg-light border border-right-0">
+<i class="far fa-eye"></i>
+</a>
+</span>
+<input type="password" name="cpwd" id="n2" class="border border-left-0 form-control" placeholder="Confirm Password">
+</div>
+</div>
+<div class="custom-control custom-checkbox">
+<input type="checkbox" class="custom-control-input" id="customcheck" required>
+<label for="customcheck" class="custom-control-label"><a class="text-light" target="_blank" href="termsC"><small><i>Terms and Conditions</i></small></a></label>
+</div>
+<button type="submit" class="btn btn-block btn-success">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item mx-3"> <a href="#log" data-toggle="modal" class="nav-link">Login</a>
+<div id="log" class="modal">
+<div class="m-6 bg-light">
+<div class="modal-header">
+<h4 class="modal-title text-dark">Login</h4>
+<button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+</div>
+<div class="modal-body">
+<form action="" method="post" onsubmit="return validate()">
+
+<div class="form-group">
+
+<div class="input-group">
+<span class="input-group-prepend">
+<a class="btn btn-outline border border-right-0"><i class="fas text-dark fa-envelope"></i></a>
+</span>
+<input class="form-control border border-left-0" id="mail" type="email" placeholder="Enter your Email">
+</div>
+
+</div>
+
+<div class="form-group">
+<div class="input-group">
+<span class="input-group-prepend">
+<a onclick="visible()" class="btn-outline btn bg-transparent border border-right-0">
+<i class="far fa-eye"></i>
+</a>
+</span>
+<input type="password" name="pwd" id="pwd" class="border border-left-0 form-control" placeholder="Password">
+</div>
+</div>
+<div class="custom-control custom-checkbox">
+<input type="checkbox" id="custom" class="custom-control-input">
+<label for="custom" class="custom-control-label">Remember Me</label>
+</div>
+<button type="submit" class="btn btn-block btn-success">Submit</button>
+<button type="submit" onclick="" class="btn btn-block btn-danger" data-dismiss="modal">Cancel</button>
+</form>
+</div>
+</div>
+</div>
+</li>
+
+<div class="dropdown-divider d-md-none"></div>
+
+<li class="nav-link mt-n1 mb-n3 mx-3">
+<form action="" class="form-group">
+
+<div class="input-group">
+<input class="form-control bg-transparent py-2 border border-right-0" type="search" placeholder="Search">
+<span class="input-group-append">
+<button type="submit" class="btn btn-outline-secondary border border-left-0">
+<i class="fas fa-search" ></i>
+</button>
+</span>
+</div>
+
+</form>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+     <div class="mt-4 container">
+       <!--T&C-->
+        <div class="text-center pt-4 title text-info">
+            TERMS & CONDITIONS
+        </div>
+            
+            <hr>
+         <article class="mt-4">
+             <h5>Website Terms & Conditions</h5>
+             <p class="mt-3">
+                 These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of a client and The Sentinel, concerning your access to and use of the <a href="https://iniaugustine.github.io/work/Sentinel">sentinel.com</a> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
+             </p>
+             <p class="mt-3">
+                 You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately. <br><br>
+                 Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms and Conditions at any time and for any reason.<br>
+                 We will alert you about any changes by updating the “Last updated” date of these Terms and Conditions, and you waive any right to receive specific notice of each such change.<br>
+
+                 It is your responsibility to periodically review these Terms and Conditions to stay informed of updates. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms and Conditions by your continued use of the Site after the date such revised Terms and Conditions are posted.<br>
+                 The information provided on the Site is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country.
+             </p>
+             <div class="mt-3">
+                 <b>INTELLECTUAL PROPERTY RIGHTS</b>
+                 <p>
+                     The Content and the Marks are provided on the Site “AS IS” for your information and personal use only. Except as expressly provided in these Terms and Conditions, no part of the Site and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.<br>
+                     Provided that you are eligible to use the Site, you are granted a limited license to access and use the Site and to download or print a copy of any portion of the Content to which you have properly gained access solely for your personal, non-commercial use. We reserve all rights not expressly granted to you in and to the Site, the Content and the Marks.
+                 </p>
+             </div>
+             <div class="mt-3">
+                 <b>USER REPRESENTATIONS</b>
+                 <p>By using the Site, you represent and warrant that:</p>
+                 <ol>
+                     <li>
+                         All registration information you submit will be true, accurate, current, and complete.
+                     </li>
+                     <li>
+                         You will maintain the accuracy of such information and promptly update such registration information as necessary.
+                     </li>
+                     <li>
+                         You have the legal capacity and you agree to comply with these Terms and Conditions.
+                     </li>
+                     <li>
+                         You are not under the age of 20.
+                     </li>
+                     <li>
+                         You will not use the Site for any illegal or unauthorized purpose.
+                     </li>
+                     <li>
+                         Your use of the Site will not violate any applicable law or regulation.
+                     </li>
+                 </ol>
+                 <p class="mt-3"><b>USER REGISTRATION</b></p>
+                 <p>
+                     You may be required to register with the Site. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable.
+                 </p>
+                 <p class="mt-3"><b>PROHIBITED ACTIVITIES</b></p>
+                 <p>
+                     You may not access or use the Site for any purpose other than that for which we make the Site available. The Site may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.
+                 </p>
+                 <div class="mt-5">
+                     <p><b>As a user of the Site, you agree not to:</b></p>
+                     <ul>
+                         <li>
+                             Systematically retrieve data or other content from the Site to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.
+                         </li>
+                         <li>
+                             Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email, or creating user accounts by automated means or under false pretenses.
+                         </li>
+                         <li>
+                             Use a buying agent or purchasing agent to make purchases on the Site.
+                         </li>
+                         <li>
+                             Use the Site to advertise or offer to sell goods and services.
+                         </li>
+                         <li>
+                             Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.
+                         </li>
+                         <li>
+                             Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords
+                         </li>
+                         <li>
+                             Engage in unauthorized framing of or linking to the Site.
+                         </li>
+                         <li>
+                             Interfere with, disrupt, or create an undue burden on the Site or the networks or services connected to the Site.
+                         </li>
+                         <li>
+                             Attempt to impersonate another user or person or use the username of another user
+                         </li>
+                         <li>
+                             Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Site.
+                         </li>
+                         <li>
+                             Attempt to bypass any measures of the Site designed to prevent or restrict access to the Site, or any portion of the Site.
+                         </li>
+                         <li>
+                             Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Site to you.
+                         </li>
+                         <li>
+                             Copy or adapt the Site’s software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.
+                         </li>
+                     </ul>
+                     
+                 </div>
+                 
+                 <div class="mt-4">
+                     <h5 class="mt-4">SITE MANAGEMENT</h5>
+                     <p><b>We reserve the right, but not the obligation, to:</b></p>
+                     <ul>
+                         <li>
+                             Monitor the Site for violations of these Terms and Conditions.
+                         </li>
+                         <li>
+                             Take appropriate legal action against anyone who, in our sole discretion, violates the law or these Terms and Conditions, including without limitation, reporting such user to law enforcement authorities.
+                         </li>
+                         <li>
+                             In our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof
+                         </li>
+                         <li>
+                             Otherwise manage the Site in a manner designed to protect our rights and property and to facilitate the proper functioning of the Site.
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </article>
+     </div>
+      <footer class="mt-4 meee text-light" style="background:#5f97ae">
+    <div class="container">
+
+<p id="title" class="text-center pt-2 name">The<span class="sent title">Sentinel</span></p>
+</div>
+    <hr class="clearfix w-100 d-md-none" style="visibility:hidden">
+
+<div class="col text-right">
+<small><i>&copy 2020 The Sentinel Corp. All Rights Reserved.</i></small>
+</div>  
+</footer>
+     
+     
+    <script>
+function valid() {
+	var n1 = document.getElementById('n1');
+	var n2 = document.getElementById('n2');
+	var email = document.getElementById("email");
+	if(n1.value==n2.value && n1.value !="")
+					{
+					alert('A verification link has been sent to your Email Address');
+					}
+	else alert('Password Mismatch');		
+			
+}
+
+
+function validate(){
+  var pwd =	document.getElementById('pwd');
+  var email =	document.getElementById('mail');
+  if(pwd.value != "" && email.value != "" ){
+  				alert("Welcome back User!");
+  				}
+  else alert("Input your password");
+				}
+
+jQuery(document).ready(function() { var btn = $('#button'); 
+				$(window).scroll(function() { if ($(window).scrollTop() > 300) { btn.addClass('show'); } else { btn.removeClass('show'); 
+			} });
+				 btn.on('click', function(e) { e.preventDefault(); 
+				 				$('html, body').animate({scrollTop:0}, '300');
+		 });
+				  });
+
+function visible() {
+			var x= document.getElementById('pwd');
+			if(x.type === "password"){
+					x.type = "text";		
+					}
+			else { 
+					x.type = "password";		
+							
+							}
+				}
+function visi() {
+			var x= document.getElementById('n1');
+			if(x.type === "password"){
+					x.type = "text";		
+					}
+			else { 
+					x.type = "password";		
+							
+							}
+				}				
+function vis() {
+			var x= document.getElementById('n2');
+			if(x.type === "password"){
+					x.type = "text";		
+					}
+			else { 
+					x.type = "password";		
+							
+							}
+				}				
+				
+</script>
+
+ </body>

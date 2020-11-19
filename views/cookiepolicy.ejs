@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/bootstrap-4.5.2-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+
+
+    <!--FONTAWESOME CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5538ff0415.js" crossorigin="anonymous"></script>
+
+    <!--FONTS CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>Sentinel Cookie Polcy</title>
+</head>
+<style>
+    .title {
+        font-size: xx-large;
+    }
+
+    body {
+        font-family: 'Alef', sans-serif;
+    }
+
+    .title,
+    #title {
+        font-size: 25px;
+    }
+
+    .name {
+        font-family: 'Piedra', cursive;
+        font-size: large;
+        text-shadow: 3px 4px 3px grey;
+    }
+
+    .sent {
+        color: #e62a2a;
+    }
+</style>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-dark bg-info navbar-expand-md">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-target="#thetarget" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="thetarget" class="justify-content-center collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link mx-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/services" target="_blank" class="nav-link mx-3">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" target="_blank" class="nav-link mx-3">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/career" target="_blank" class="nav-link mx-3">Applications</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a href="#mod" data-toggle="modal" class="nav-link mx-3">Register</a>
+
+                            <div id="mod" class="modal">
+                                <div class="m-6 " style="background:#5f97ae">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-white">Register</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" onsubmit="return valid()" method="post">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a class="btn bg-light btn-outline border border-right-0"><i class="fa fa-envelope"></i></a>
+                                                    </span>
+                                                    <input class="form-control border border-left-0" id="email" type="email" placeholder="Enter your Email" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="visi()" class="btn-outline btn bg-light border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="pwd" id="n1" class="border border-left-0 form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="vis()" class="btn-outline btn bg-light border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="cpwd" id="n2" class="border border-left-0 form-control" placeholder="Confirm Password">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customcheck" required>
+                                                <label for="customcheck" class="custom-control-label"><a class="text-light" target="_blank" href="termsC"><small><i>Terms and Conditions</i></small></a></label>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-success">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-3"> <a href="#log" data-toggle="modal" class="nav-link">Login</a>
+                            <div id="log" class="modal">
+                                <div class="m-6 bg-light">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-dark">Login</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="post" onsubmit="return validate()">
+
+                                            <div class="form-group">
+
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a class="btn btn-outline border border-right-0"><i class="fas text-dark fa-envelope"></i></a>
+                                                    </span>
+                                                    <input class="form-control border border-left-0" id="mail" type="email" placeholder="Enter your Email">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="visible()" class="btn-outline btn bg-transparent border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="pwd" id="pwd" class="border border-left-0 form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" id="custom" class="custom-control-input">
+                                                <label for="custom" class="custom-control-label">Remember Me</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-success">Submit</button>
+                                            <button type="submit" onclick="" class="btn btn-block btn-danger" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <div class="dropdown-divider d-md-none"></div>
+
+                        <li class="nav-link mt-n1 mb-n3 mx-3">
+                            <form action="" class="form-group">
+
+                                <div class="input-group">
+                                    <input class="form-control bg-transparent py-2 border border-right-0" type="search" placeholder="Search">
+                                    <span class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-secondary border border-left-0">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-3">
+
+        <!--Cookie Policy-->
+        <div class="text-center pt-4 title text-info">
+            COOKIE POLICY
+        </div>
+
+        <hr>
+        <article class="mt-4">
+            <p>
+                The Sentinel Corp. website uses cookies and similar technologies in order to distinguish you from other users. By using cookies, we are able to provide you with a better experience and to improve Our Site by better understanding how you use it. Please read this Cookie Policy carefully and ensure that you understand it. Your acceptance of Our Cookie Policy is deemed to occur if you continue using Our Site. If you do not agree to Our Cookie Policy, please stop using Our Site immediately.
+            </p>
+
+        </article>
+        <div class="mt-4">
+            <h5>Use of cookies</h5>
+            <ul>
+                <li>
+                    A cookie is a small text file which is placed onto your computer (or other electronic device) when you access our Site. . Cookies contain information that is transferred to your computer's hard drive.
+                </li>
+            </ul>
+            <h5 class="mt-4">How Does Our Site Use Cookies?</h5>
+            <p>We may use cookies on our Site for a number of reasons, all of which are designed to improve your experience of using it. Cookies allow you to navigate around our Site better and enable us to tailor and improve our Site by saving your preferences and understanding your use of it. We use the following types of cookie:</p>
+            <div><b>We use the following types of cookie:</b></div>
+            <ol class="mt-3">
+                <li>
+                    <strong>Strictly Necessary Cookies</strong>
+                    <p>
+                        They include, for example, cookies that enable you to log into secure areas of our site or make use of e-billing services. We do not require your consent to place these cookies. Nevertheless, you may be able to block these cookies yourself on your device/ browser, but restricting these cookies is likely to mean that our site will not work as you would expect and certain functionality may be inoperable.
+                    </p>
+                </li>
+                <li>
+                    <strong>Analytical/performance cookies</strong>
+                    <p>
+                        They allow us to recognize and count the number of visitors and to see how visitors move around our site when they are using it. This helps us to improve the way our site works, for example, by ensuring that users are finding what they are looking for easily. We use cookies to compile visitor statistics such as how many people have visited our site, how they reached our site, what type of technology they are using (e.g. Mac or Windows which helps to identify when our site isn't working as it should for particular technologies), how long they spend on the site, what page they look at etc. This helps us to continuously improve our website.
+                    </p>
+                </li>
+                <li>
+                    <strong>Functionality cookies</strong>
+                    <p>
+                        These are used to recognize you when you return to our site. This enables us to personalize our content for you, greet you by name and remember your preferences (for example, your choice of language or region).
+                    </p>
+                </li>
+                <li>
+                    <strong>Targeting cookies</strong>
+                    <p>
+                        It is also important for us to know when and how often you visit our Site, and which parts of it you have used (including which pages you have visited and which links you have clicked on). As with analytics cookies, this information helps us to better understand you and, in turn, to make our Site and advertising more relevant to your interests. Some information gathered by targeting cookies may also be shared with third parties.
+                    </p>
+                </li>
+                <li>
+                    <strong>Third Party Cookies</strong>
+                    <p>
+                        Third party cookies are not placed by us and we have no control over them. Third party cookies may be used by advertising services to serve up tailored advertising to you on our Site, or by third parties providing analytics services to us (these cookies will work in the same way as analytics cookies described above).
+                    </p>
+                </li>
+                <li>
+                    <strong>Persistent Cookies</strong>
+                    <p>
+                        Any of the above types of cookie may be a persistent cookie. Persistent cookies are those which remain on your computer or device for a predetermined period and are activated each time you visit our Site.
+                    </p>
+                </li>
+                <li>
+                    <strong>Session Cookies</strong>
+                    <p>
+                        Any of the above types of cookie may be a session cookie. Session cookies are temporary and only remain on your computer or device from the point at which you visit our Site until you close your browser. Session cookies are deleted when you close your browser.
+                    </p>
+                </li>
+            </ol>
+            <div class="mt-4">
+                <h5>How you can control cookies</h5>
+                <p>
+                    Internet browsers normally accept cookies by default. You can change these settings if you wish, however please be aware that this is not generally a per-site setting and will prevent all websites from using cookies, not just ours. Please also be aware that by disabling cookies in your browser, you may impair the functionality of our Site. The links below provide instructions on how to control cookies in all mainstream browsers:
+                </p>
+                <div class="mt-3">
+                    <b>The links below provide instructions on how to control cookies in all mainstream browsers:</b>
+                    <ul>
+                        <li>
+                            Google Chrome: <a href="https://support.google.com/chrome/answer/95647?hl=en-GB">https://support.google.com/chrome/answer/95647?hl=en-GB</a>
+                        </li>
+                        <li>
+                            Microsoft Internet Explorer: <a href="https://support.microsoft.com/en-us/kb/278835">https://support.microsoft.com/en-us/kb/278835</a>
+                        </li>
+                        <li>
+                            Microsoft Edge: <a href="https://support.microsoft.com/en-gb/products/microsoft-edge">https://support.microsoft.com/en-gb/products/microsoft-edge</a> <br>
+                            (Please note that there are no specific instructions at this time, but Microsoft support will be able to assist)
+                        </li>
+                        <li>
+                            Safari (OSX): <a href="https://support.apple.com/kb/PH21411?viewlocale=en_GB&locale=en_GB">https://support.apple.com/kb/PH21411?viewlocale=en_GB&locale=en_GB</a>
+                        </li>
+                        <li>
+                            Safari (iOS): <a href="https://support.apple.com/en-gb/HT201265">https://support.apple.com/en-gb/HT201265</a>
+                        </li>
+                        <li>
+                            Mozilla Firefox: <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences</a>
+                        </li>
+                        <li>
+                            Android: <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DAndroid&hl=en">https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DAndroid&hl=en</a>
+                            <div class="mt-4">(Please refer to your device’s documentation for manufacturers’ own browsers)</div>
+                        </li>
+                    </ul>
+                    <p>
+                        <b>
+                            Changes to this Cookie Policy
+                        </b>
+                    </p>
+                    <div>
+                        We may alter this Cookie Policy at any time. Any such changes will become binding on you on your first use of our Site after the changes have been made. You are therefore advised to check this page from time to time.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="mt-4 meee text-light" style="background:#5f97ae">
+        <div class="container">
+
+            <p id="title" class="text-center pt-2 name">The<span class="sent title">Sentinel</span></p>
+        </div>
+        <hr class="clearfix w-100 d-md-none" style="visibility:hidden">
+
+        <div class="col text-right">
+            <small><i>&copy 2020 The Sentinel Corp. All Rights Reserved.</i></small>
+        </div>
+
+
+    </footer>
+
+    <script>
+        function valid() {
+            var n1 = document.getElementById('n1');
+            var n2 = document.getElementById('n2');
+            var email = document.getElementById("email");
+            if (n1.value == n2.value && n1.value != "") {
+                alert('A verification link has been sent to your Email Address');
+            } else alert('Password Mismatch');
+
+        }
+
+
+        function validate() {
+            var pwd = document.getElementById('pwd');
+            var email = document.getElementById('mail');
+            if (pwd.value != "" && email.value != "") {
+                alert("Welcome back User!");
+            } else alert("Input your password");
+        }
+
+        jQuery(document).ready(function() {
+            var btn = $('#button');
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, '300');
+            });
+        });
+
+        function visible() {
+            var x = document.getElementById('pwd');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+        function visi() {
+            var x = document.getElementById('n1');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+        function vis() {
+            var x = document.getElementById('n2');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+    </script>
+
+</body>
+</html>

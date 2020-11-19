@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Sentinel</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.5.2-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+
+    <!--FONTAWESOME CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5538ff0415.js" crossorigin="anonymous"></script>
+
+    <!--FONTS CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Alef', sans-serif;
+        }
+
+        .title,
+        #title {
+            font-size: 40px;
+        }
+
+        .name {
+            font-family: 'Piedra', cursive;
+            font-size: x-large;
+            text-shadow: 3px 4px 3px grey;
+        }
+
+        .sent {
+            color: #e62a2a;
+        }
+
+        .slogan {
+            font-family: 'Acme', sans-serif;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 350px;
+        }
+
+        .arrow {
+            padding: 2px;
+            background: black;
+            color: white;
+        }
+
+        .text {
+            color: #af2020;
+        }
+
+        .but {
+            color: white;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .here {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--Title-->
+
+    <div class="container">
+
+        <p id="title" class="text-center pt-2 name">The<span class="sent title">Sentinel</span></p>
+    </div>
+
+    <!--NavBar-->
+    <header>
+
+        <nav class="navbar navbar-dark bg-info navbar-expand-md">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-target="#thetarget" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="thetarget" class="justify-content-center collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link mx-3 disabled">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/services" target="_blank" class="nav-link mx-3">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" target="_blank" class="nav-link mx-3">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/career" target="_blank" class="nav-link mx-3">Applications</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a href="#mod" data-toggle="modal" class="nav-link mx-3">Register</a>
+
+                            <div id="mod" class="modal">
+                                <div class="m-6 " style="background:#5f97ae">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-white">Register</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" onsubmit="return valid()" method="post">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a class="btn bg-light btn-outline border border-right-0"><i class="fa fa-envelope"></i></a>
+                                                    </span>
+                                                    <input class="form-control border border-left-0" id="email" type="email" placeholder="Enter your Email" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="visi()" class="btn-outline btn bg-light border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="pwd" id="n1" class="border border-left-0 form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="vis()" class="btn-outline btn bg-light border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="cpwd" id="n2" class="border border-left-0 form-control" placeholder="Confirm Password">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customcheck" required>
+                                                <label for="customcheck" class="custom-control-label"><a class="text-light" target="_blank" href="termsC"><small><i>Terms and Conditions</i></small></a></label>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-success">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-3"> <a href="#log" data-toggle="modal" class="nav-link">Login</a>
+                            <div id="log" class="modal">
+                                <div class="m-6 bg-light">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-dark">Login</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><span class="text-danger">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="POST" onsubmit="return validate()">
+
+                                            <div class="form-group">
+
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a class="btn btn-outline border border-right-0"><i class="fas text-dark fa-envelope"></i></a>
+                                                    </span>
+                                                    <input class="form-control border border-left-0" id="mail" type="email" placeholder="Enter your Email">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <a onclick="visible()" class="btn-outline btn bg-transparent border border-right-0">
+                                                            <i class="far fa-eye"></i>
+                                                        </a>
+                                                    </span>
+                                                    <input type="password" name="pwd" id="pwd" class="border border-left-0 form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" id="custom" class="custom-control-input">
+                                                <label for="custom" class="custom-control-label">Remember Me</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-success">Submit</button>
+                                            <button type="submit" onclick="" class="btn btn-block btn-danger" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <div class="dropdown-divider d-md-none"></div>
+
+                        <li class="nav-link mt-n1 mb-n3 mx-3">
+                            <form action="" class="form-group">
+
+                                <div class="input-group">
+                                    <input class="form-control bg-transparent py-2 border border-right-0" type="search" placeholder="Search">
+                                    <span class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-secondary border border-left-0">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Slogan-->
+    <div class="container">
+        <h4 class="my-4 slogan text-center">Guard with Honour</h4>
+    </div>
+
+    <!--Carousel-->
+    <div id="pics" class="carousel here slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#pics" data-slide-to="0" class="active"></li>
+            <li data-target="#pics" data-slide-to="1"></li>
+            <li data-target="#pics" data-slide-to="2"></li>
+            <li data-target="#pics" data-slide-to="3"></li>
+            <li data-target="#pics" data-slide-to="4"></li>
+            <li data-target="#pics" data-slide-to="5"></li>
+            <li data-target="#pics" data-slide-to="6"></li>
+            <li data-target="#pics" data-slide-to="7"></li>
+            <li data-target="#pics" data-slide-to="8"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="sol3.jpeg"></div>
+            <div class="carousel-item"><img src="sol4.jpeg"></div>
+            <div class="carousel-item"><img src="Guard1.jpeg"></div>
+            <div class="carousel-item"><img src="sol6.jpeg"></div>
+            <div class="carousel-item"><img src="Guard2.jpeg"></div>
+            <div class="carousel-item"><img src="Guard4.jpeg"></div>
+            <div class="carousel-item"><img src="sol5.jpeg"></div>
+            <div class="carousel-item"><img src="Guard3.jpeg"></div>
+            <div class="carousel-item"><img src="Guard5.jpeg"></div>
+        </div>
+        <a href="#pics" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#pics" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    <!--Our Code-->
+    <div class="container">
+        <h3 class="text-center my-4 slogan">Our Code</h3>
+    </div>
+
+    <!--The Code-->
+    <div class="container-fluid my-4">
+
+        <div class="row mx-auto p-3">
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h3 class="text-center my-3 slogan">Protect</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        We protect our clients as well as their pivacy. Testimonies can also confirm this.
+                    </div>
+                </div>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h3 class="text-center my-3 slogan">Honour</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        Our integrity preceeds us as we treat every transaction with utmost secrecy.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="row p-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h3 class="text-center my-3 slogan">Safeguard</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        Our clients are rest assured of their safety. We will protect you with our lives.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h3 class="text-center my-3 slogan">Experience</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        We give the best. Our personnels are specialized and highly trained.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <div class="row p-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h3 class="text-center my-3 slogan">Armoury</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        No need to worry about weapons. Our arsenal are updated and upgraded as and when due.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h3 class="text-center my-3 slogan">Technology</h3>
+                    </div>
+                    <div class="card-body mb-4 text-center">
+                        We provide state of the art technology to ensure the safety of our clients.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-2 pb-4" style="background-color: lightblue">
+
+        <!--Consultation form-->
+        <div class="my-5 mx-5">
+            <h5>FREE SECURITY CONSULTATION</h5>
+
+            <div class="mt-4">
+                <form action="/freeConsult" method="POST" class="needs-validation" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">
+                            First Name<span style="color: red">*</span>
+                        </label>
+                        <input class="form-control" type="text" required name="fname">
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">
+                            Last Name<span style="color: red">*</span>
+                        </label>
+                        <input class="form-control" type="text" required name="lname">
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="num">
+                            Phone Number<span style="color: red">*</span>
+                        </label>
+                        <input class="form-control" type="text" required name="num">
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">
+                            Best Contact Time<span style="color: red">*</span>
+                        </label>
+                        <select name="contact" class="custom-select">
+                            <option selected></option>
+                            <option value="Anytime">Anytime</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            <option value="Evening">Evening</option>
+                        </select>
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email Address<span style="color: red">*</span>
+                        </label>
+                        <input class="form-control" type="email" required name="email">
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="text">
+                            Comments/Questions
+                        </label>
+                        <textarea class="form-control" required name="message" rows="7"></textarea>
+                        <div class="valid-feedback">valid</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <p style="opacity:0.5">
+                        Our experienced Security Consultants will provide you with an honest evaluation of your current security situation and suggest the best options to meet your needs.
+                    </p>
+                    <button type="submit" class="btn my-5 btn-info btn-block">Submit</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--Footer-->
+    <footer class="my-4 meee text-light" style="background:#5f97ae">
+        <div class="container-fluid">
+            <hr class="clearfix my-4 w-100 d-md-none">
+
+            <!--About Us-->
+
+            <div class="col mx-2 my-4">
+                <h3 class="text-center mx-3 pt-3 slogan text">About Us</h3>
+                <p>
+                    The Sentinel Corp. is a leading provider of integrated, intelligence driven risk management services. Founded in 2001 as a manned guarding company, we have evolved over the years with a formidable track record and are now known as a security solution provider of choice to many organizations and government institutions.
+                    <br>
+                    You can now feel at ease when we are with you. Your safety is our number one priority and you can be sure that your privacy would not be compromised.
+                </p>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+
+
+            <!--Contact-->
+
+            <div class="row mt-4">
+
+                <div class="col my-4 text-md-left">
+                    <h5 class="text text-center text-md-left slogan">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li> <a href="tel:+2349048792079"><i class="fas mx-2 text-dark fa-phone-alt"></i></a> +2349048792079
+                        </li>
+                        <li>
+                            <a href="mailto:iniaugustineokonko@gmail.com"><i class="fas mx-2 text-dark fa-envelope"></i></a> iniaugustineokonko@gmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+
+                <!--Info-->
+                <div class="col text-center my-4 text-md-left">
+                    <h5 class="text slogan">Informations</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-light" target="_blank" href="/contact">Contacts</a>
+                        </li>
+                        <li>
+                            <a class="text-light" target="_blank" href="/location">Locations</a>
+                        </li>
+                        <li>
+                            <a class="text-light" target="_b lank" href="/career">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!--Links-->
+                <div class="col text-center my-4 text-md-left">
+                    <h5 class="text slogan">Helpful Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-light" target="_blank" href="/cookiepolicy">Cookie Policy</a>
+                        </li>
+                        <li>
+                            <a class="text-light" target="_blank" href="/sentinelprivacy">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="text-light" target="_blank" href="/services">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-light" target="_blank" href="/termsofservice">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="/termsC" target="_blank">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!--Maps-->
+            <div class="row mx-0 my-5">
+
+                <div class="col">
+                    <div class="row mx-3">
+                        <i class="fas mx-2 text-dark fa-map-marker-alt"></i> THE SENTINEL CORP. Km 6, Idiroko Road, Ota, Ogun State, Nigeria.
+                    </div>
+                    <span class="row mx-3">
+                        <i class="fas mx-2 text-dark fa-map-marker-alt"></i> THE SENTINEL CORP. 18th, Street North
+                        Birmingham, USA.
+                    </span>
+
+                    <span class="row mx-3">
+                        <i class="fas mx-2 text-dark fa-map-marker-alt"></i>
+                        THE SENTINEL CORP. 1 Fifth Avenue #40-06, Guthrie House, Singapore 268312.
+                    </span>
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+
+                <!--Subscribe-->
+                <div class="col text-center mt-0">
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label for="email">
+                                <h3 class="slogan text">Subscribe More Info</h3>
+                            </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn border border-right-0" disabled>
+                                        <i class="fas fa-envelope-square"></i>
+                                    </button>
+                                </div>
+                                <input type="email" name="email" class="bg-transparent form-control border border-left-0" placeholder="Enter your Email">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+
+            </div>
+
+            <!--Back to top-->
+            <div class="row justify-content-end">
+                <span>
+                    <button class="arrow" id="button"><i class="fas fa-arrow-up fa-2x"></i></button>
+                </span>
+            </div>
+            <hr class="clearfix w-100" style="background:black">
+
+            <div class="row">
+
+
+                <div class="col text-center text-md-right">
+                    <ul class="list-inline list-unstyled">
+                        <li class="list-inline-item mx-2">
+                            <a class="but" href="http://api.whatsapp.com/send?phone=2348173399072&text=Chat%20from%20Website"><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a class="but" href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a class="but" href="mailto:iniaugustineokonko@gmail.com"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a class="but" href="https://twitter.com/IniAugustine1?s=08"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a class="but" href="https://www.linkedin.com/in/ini-augustine-a8ba7419a"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="clearfix w-100 d-md-none" style="visibility:hidden">
+
+                <div class="col text-right">
+                    <small><i>&copy 2020 The Sentinel Corp. All Rights Reserved.</i></small>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </footer>
+
+
+
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+    </script>
+    <script>
+        function valid() {
+            var n1 = document.getElementById('n1');
+            var n2 = document.getElementById('n2');
+            var email = document.getElementById("email");
+            if (n1.value == n2.value && n1.value != "") {
+                alert('A verification link has been sent to your Email Address');
+            } else alert('Password Mismatch');
+
+        }
+
+
+        function validate() {
+            var pwd = document.getElementById('pwd');
+            var email = document.getElementById('mail');
+            if (pwd.value != "" && email.value != "") {
+                alert("Welcome back User!");
+            } else alert("Input your password");
+        }
+
+        jQuery(document).ready(function() {
+            var btn = $('#button');
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, '300');
+            });
+        });
+
+        function visible() {
+            var x = document.getElementById('pwd');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+        function visi() {
+            var x = document.getElementById('n1');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+        function vis() {
+            var x = document.getElementById('n2');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>>
