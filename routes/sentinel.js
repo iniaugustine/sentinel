@@ -5,7 +5,7 @@ const sentinel = express.Router();
 
 
 sentinel.get('/', (req, res) =>{
-    res.render('sentinel');
+    res.render('Sentinel');
 });
 
 
