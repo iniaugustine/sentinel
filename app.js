@@ -44,7 +44,7 @@ app.use('/', sentinel);
 
 
 //Connect to Mongoose
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, function(){
+mongoose.connect('process.env.DB_CONNECTION', { useNewUrlParser: true, useUnifiedTopology: true }, function(){
     console.log("Connected to Database");
 });
 
