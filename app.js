@@ -44,7 +44,7 @@ app.use('/', sentinel);
 
 
 //Connect to Mongoose
-mongoose.connect('process.env.DB_CONNECTION', { useNewUrlParser: true, useUnifiedTopology: true }, function(){
+mongoose.connect('mongodb+srv://iniaugustine:gaarakaze99@cluster0.mha2o.mongodb.net/consult?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, function(){
     console.log("Connected to Database");
 });
 
